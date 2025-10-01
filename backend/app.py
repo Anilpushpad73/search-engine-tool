@@ -215,7 +215,7 @@ class SearchEngine:
 # Initialize search engine
 search_engine = SearchEngine(startups_data)
 
-@app.route('/api/search', methods=['GET'])
+@app.route('/search', methods=['GET'])
 def search_startups():
     """Search endpoint that accepts query and filters"""
     try:
@@ -251,7 +251,7 @@ def search_startups():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-@app.route('/api/filters', methods=['GET'])
+@app.route('/filters', methods=['GET'])
 def get_filter_options():
     """Get available filter options"""
     try:
@@ -271,7 +271,7 @@ def get_filter_options():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-@app.route('/api/health', methods=['GET'])
+@app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
     return jsonify({
