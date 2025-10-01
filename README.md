@@ -52,7 +52,7 @@ The application includes a comprehensive dataset of 40 startups with:
    ```
 2. **Create .env file**
    ```bash
-   VITE_API_BASE_URL=http://localhost:5000/api
+   VITE_API_BASE_URL=http://localhost:5000
    ```
 
 3. **Set up Python backend**
