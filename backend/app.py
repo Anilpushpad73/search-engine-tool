@@ -168,7 +168,7 @@ class SearchEngine:
         # Sort by score and return top results
         results.sort(key=lambda x: x['score'], reverse=True)
                 # Filter results with score > 10
-        results = [res for res in results if res['score'] > 10]
+        results = [res for res in results if res['score'] > 0.1]
         return results[:limit]
     
     def highlight_matches(self, text, query):
